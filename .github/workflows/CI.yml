@@ -139,6 +139,8 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
@@ -169,6 +171,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
@@ -193,6 +197,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
