@@ -13,22 +13,19 @@
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stkevintan/napi-nng.git"
-  },
   "bugs": {
     "url": "https://github.com/stkevintan/napi-nng/issues"
   },
   "napi": {
     "name": "nng",
     "triples": {
-      "defaults": true,
       "additional": [
+        "aarch64-apple-darwin",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-pc-windows-msvc",
         "universal-apple-darwin"
       ]
-    },
-    "npmClient": "npm"
+    }
   },
   "license": "MIT",
   "devDependencies": {
@@ -45,19 +42,14 @@
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
     "prepublishOnly": "napi prepublish -t npm",
-    "version": "napi version",
+    "test": "vitest",
     "universal": "napi universal",
-    "test": "vitest"
+    "version": "napi version"
   },
   "dependencies": {
     "typescript": "^5.3.3"
   },
-  "optionalDependencies": {
-    "napi-nng-win32-x64-msvc": "0.0.0",
-    "napi-nng-darwin-x64": "0.0.0",
-    "napi-nng-linux-x64-gnu": "0.0.0",
-    "napi-nng-darwin-universal": "0.0.0"
-  },
+  "repository": "https://github.com/stkevintan/napi-nng.git",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }

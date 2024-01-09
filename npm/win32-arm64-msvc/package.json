@@ -1,15 +1,15 @@
 {
-  "name": "napi-nng-darwin-x64",
+  "name": "napi-nng-win32-arm64-msvc",
   "version": "0.0.0",
   "os": [
-    "darwin"
+    "win32"
   ],
   "cpu": [
-    "x64"
+    "arm64"
   ],
-  "main": "nng.darwin-x64.node",
+  "main": "nng.win32-arm64-msvc.node",
   "files": [
-    "nng.darwin-x64.node"
+    "nng.win32-arm64-msvc.node"
   ],
   "license": "MIT",
   "engines": {

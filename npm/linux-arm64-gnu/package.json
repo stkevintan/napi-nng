@@ -1,15 +1,15 @@
 {
-  "name": "napi-nng-linux-x64-gnu",
+  "name": "napi-nng-linux-arm64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
   ],
   "cpu": [
-    "x64"
+    "arm64"
   ],
-  "main": "nng.linux-x64-gnu.node",
+  "main": "nng.linux-arm64-gnu.node",
   "files": [
-    "nng.linux-x64-gnu.node"
+    "nng.linux-arm64-gnu.node"
   ],
   "license": "MIT",
   "engines": {
