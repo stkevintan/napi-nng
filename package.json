@@ -50,5 +50,6 @@
   "repository": "https://github.com/stkevintan/napi-nng.git",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

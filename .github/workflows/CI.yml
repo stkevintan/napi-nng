@@ -28,45 +28,43 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: |
-              pnpm build
+              yarn build
               strip -x *.node
           - host: windows-latest
-            build: pnpm build
+            build: yarn build
             target: x86_64-pc-windows-msvc
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
             build: |-
               set -e &&
-              pnpm build --target x86_64-unknown-linux-gnu &&
+              yarn build --target x86_64-unknown-linux-gnu &&
               strip *.node
           - host: macos-latest
             target: aarch64-apple-darwin
             build: |
-              pnpm build --target aarch64-apple-darwin
+              yarn build --target aarch64-apple-darwin
               strip -x *.node
           # - host: ubuntu-latest
           #   target: aarch64-unknown-linux-gnu
           #   docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-aarch64
           #   build: |-
           #     set -e &&
-          #     pnpm build --target aarch64-unknown-linux-gnu &&
+          #     yarn build --target aarch64-unknown-linux-gnu &&
           #     aarch64-unknown-linux-gnu-strip *.node
           # - host: windows-latest
           #   target: aarch64-pc-windows-msvc
-          #   build: pnpm build --target aarch64-pc-windows-msvc
+          #   build: yarn build --target aarch64-pc-windows-msvc
     name: stable - ${{ matrix.settings.target }} - node@18
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         if: ${{ !matrix.settings.docker }}
         with:
           node-version: 18
-          cache: pnpm
+          cache: yarn
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         if: ${{ !matrix.settings.docker }}
@@ -93,16 +91,16 @@ jobs:
         shell: bash
       - name: Setup node x86
         if: matrix.settings.target == 'i686-pc-windows-msvc'
-        run: pnpm config set supportedArchitectures.cpu "ia32"
+        run: yarn config set supportedArchitectures.cpu "ia32"
         shell: bash
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Setup node x86
         uses: actions/setup-node@v4
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         with:
           node-version: 18
-          cache: pnpm
+          cache: yarn
           architecture: x86
       - name: Build in docker
         uses: addnab/docker-run-action@v3
@@ -139,15 +137,13 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: pnpm
+          cache: yarn
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -157,7 +153,7 @@ jobs:
         run: ls -R .
         shell: bash
       - name: Test bindings
-        run: pnpm test
+        run: yarn test
   test-linux-x64-gnu-binding:
     name: Test bindings on Linux-x64-gnu - node@${{ matrix.node }}
     needs:
@@ -171,15 +167,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: pnpm
+          cache: yarn
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -197,15 +191,13 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: pnpm
+          cache: yarn
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Download macOS x64 artifact
         uses: actions/download-artifact@v3
         with:
@@ -217,7 +209,7 @@ jobs:
           name: bindings-aarch64-apple-darwin
           path: artifacts
       - name: Combine binaries
-        run: pnpm universal
+        run: yarn universal
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
@@ -233,21 +225,19 @@ jobs:
       - universal-macOS
     steps:
       - uses: actions/checkout@v4
-      - name: Install pnpm
-        run: corepack enable pnpm
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: pnpm
+          cache: yarn
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Download all artifacts
         uses: actions/download-artifact@v3
         with:
           path: artifacts
       - name: Move artifacts
-        run: pnpm artifacts
+        run: yarn artifacts
       - name: List packages
         run: ls -R ./npm
         shell: bash
