@@ -1,6 +1,6 @@
 [package]
 edition = "2021"
-name = "wcf-native"
+name = "napi-nng"
 version = "0.0.0"
 
 [lib]

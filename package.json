@@ -1,9 +1,25 @@
 {
   "name": "napi-nng",
-  "keywords": ["nanomsg", "nng", "nanømsg", "binding", "napi"],
+  "author": {
+    "name": "stkevintan"
+  },
+  "keywords": [
+    "nanomsg",
+    "nng",
+    "nanømsg",
+    "binding",
+    "napi"
+  ],
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stkevintan/napi-nng"
+  },
+  "bugs": {
+    "url": "https://github.com/stkevintan/napi-nng/issues"
+  },
   "napi": {
     "name": "nng",
     "triples": {
