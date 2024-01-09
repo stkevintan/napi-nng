@@ -37,7 +37,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.android-arm64.node')
           } else {
-            nativeBinding = require('napi-nng-android-arm64')
+            nativeBinding = require('@rustup/nng-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -49,7 +49,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.android-arm-eabi.node')
           } else {
-            nativeBinding = require('napi-nng-android-arm-eabi')
+            nativeBinding = require('@rustup/nng-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -69,7 +69,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('napi-nng-win32-x64-msvc')
+            nativeBinding = require('@rustup/nng-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -83,7 +83,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('napi-nng-win32-ia32-msvc')
+            nativeBinding = require('@rustup/nng-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -97,7 +97,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('napi-nng-win32-arm64-msvc')
+            nativeBinding = require('@rustup/nng-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -113,7 +113,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./nng.darwin-universal.node')
       } else {
-        nativeBinding = require('napi-nng-darwin-universal')
+        nativeBinding = require('@rustup/nng-darwin-universal')
       }
       break
     } catch {}
@@ -124,7 +124,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.darwin-x64.node')
           } else {
-            nativeBinding = require('napi-nng-darwin-x64')
+            nativeBinding = require('@rustup/nng-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -138,7 +138,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.darwin-arm64.node')
           } else {
-            nativeBinding = require('napi-nng-darwin-arm64')
+            nativeBinding = require('@rustup/nng-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -157,7 +157,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./nng.freebsd-x64.node')
       } else {
-        nativeBinding = require('napi-nng-freebsd-x64')
+        nativeBinding = require('@rustup/nng-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -174,7 +174,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./nng.linux-x64-musl.node')
             } else {
-              nativeBinding = require('napi-nng-linux-x64-musl')
+              nativeBinding = require('@rustup/nng-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -187,7 +187,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./nng.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('napi-nng-linux-x64-gnu')
+              nativeBinding = require('@rustup/nng-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -203,7 +203,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./nng.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('napi-nng-linux-arm64-musl')
+              nativeBinding = require('@rustup/nng-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -216,7 +216,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./nng.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('napi-nng-linux-arm64-gnu')
+              nativeBinding = require('@rustup/nng-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -231,7 +231,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./nng.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('napi-nng-linux-arm-gnueabihf')
+            nativeBinding = require('@rustup/nng-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e
@@ -246,7 +246,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./nng.linux-riscv64-musl.node')
             } else {
-              nativeBinding = require('napi-nng-linux-riscv64-musl')
+              nativeBinding = require('@rustup/nng-linux-riscv64-musl')
             }
           } catch (e) {
             loadError = e
@@ -259,7 +259,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./nng.linux-riscv64-gnu.node')
             } else {
-              nativeBinding = require('napi-nng-linux-riscv64-gnu')
+              nativeBinding = require('@rustup/nng-linux-riscv64-gnu')
             }
           } catch (e) {
             loadError = e

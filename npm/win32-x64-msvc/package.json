@@ -28,7 +28,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "repository": "https://github.com/stkevintan/napi-nng.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stkevintan/napi-nng.git"
+  },
   "bugs": {
     "url": "https://github.com/stkevintan/napi-nng/issues"
   }
