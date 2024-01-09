@@ -14,7 +14,7 @@ export class Socket {
   send(req: Buffer): Buffer
   close(): void
   connected(): boolean
-  static recvMessage(url: string, options: SocketOptions | undefined | null, callback: (...args: any[]) => any): MessageRecvDisposable
+  static recvMessage(callback: (err: null | Error, bytes: Buffer) => void): MessageRecvDisposable
 }
 export class MessageRecvDisposable {
   dispose(): void

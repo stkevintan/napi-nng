@@ -99,14 +99,12 @@ impl Socket {
     self.connected
   }
 
-  #[napi]
+  #[napi(ts_args_type = "callback: (err: null | Error, bytes: Buffer) => void")]
   pub fn recv_message(
     url: String,
     options: Option<SocketOptions>,
-    callback: JsFunction,
+    callback: ThreadsafeFunction<Buffer, ErrorStrategy::CalleeHandled>,
   ) -> Result<MessageRecvDisposable> {
-    let tsfn: ThreadsafeFunction<Buffer, ErrorStrategy::CalleeHandled> =
-      callback.create_threadsafe_function(1, |ctx| Ok(vec![ctx.value]))?;
     let client = Self::create_client(&options.unwrap_or_default())?;
     client
       .dial(&url)
@@ -119,7 +117,7 @@ impl Socket {
       }
       match client.recv() {
         Ok(msg) => {
-          tsfn.clone().call(
+          callback.clone().call(
             Ok(msg.as_slice().into()),
             ThreadsafeFunctionCallMode::NonBlocking,
           );
