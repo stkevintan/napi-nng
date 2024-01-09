@@ -1,0 +1,38 @@
+{
+  "name": "napi-nng-linux-x64-gnu",
+  "version": "0.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "nng.linux-x64-gnu.node",
+  "files": [
+    "nng.linux-x64-gnu.node"
+  ],
+  "keywords": [
+    "nanomsg",
+    "nng",
+    "nanømsg",
+    "binding",
+    "napi"
+  ],
+  "author": {
+    "name": "stkevintan"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stkevintan/napi-nng.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stkevintan/napi-nng/issues"
+  },
+  "libc": [
+    "glibc"
+  ]
+}

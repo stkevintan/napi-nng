@@ -15,7 +15,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stkevintan/napi-nng"
+    "url": "git+https://github.com/stkevintan/napi-nng.git"
   },
   "bugs": {
     "url": "https://github.com/stkevintan/napi-nng/issues"
@@ -51,5 +51,11 @@
   },
   "dependencies": {
     "typescript": "^5.3.3"
+  },
+  "optionalDependencies": {
+    "napi-nng-win32-x64-msvc": "0.0.0",
+    "napi-nng-darwin-x64": "0.0.0",
+    "napi-nng-linux-x64-gnu": "0.0.0",
+    "napi-nng-darwin-universal": "0.0.0"
   }
 }

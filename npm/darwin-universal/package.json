@@ -1,0 +1,32 @@
+{
+  "name": "napi-nng-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "nng.darwin-universal.node",
+  "files": [
+    "nng.darwin-universal.node"
+  ],
+  "keywords": [
+    "nanomsg",
+    "nng",
+    "nanømsg",
+    "binding",
+    "napi"
+  ],
+  "author": {
+    "name": "stkevintan"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stkevintan/napi-nng.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stkevintan/napi-nng/issues"
+  }
+}
