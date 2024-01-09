@@ -1,5 +1,5 @@
 {
-  "name": "napi-nng",
+  "name": "@rustup/nng",
   "author": {
     "name": "stkevintan"
   },
@@ -47,7 +47,10 @@
   "dependencies": {
     "typescript": "^5.3.3"
   },
-  "repository": "https://github.com/stkevintan/napi-nng.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stkevintan/napi-nng.git"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

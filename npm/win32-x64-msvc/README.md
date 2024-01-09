@@ -1,3 +1,3 @@
-# `napi-nng-win32-x64-msvc`
+# `@rustup/nng-win32-x64-msvc`
 
-This is the **x86_64-pc-windows-msvc** binary for `napi-nng`
+This is the **x86_64-pc-windows-msvc** binary for `@rustup/nng`

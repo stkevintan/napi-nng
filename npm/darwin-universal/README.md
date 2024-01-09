@@ -1,3 +1,3 @@
-# `napi-nng-darwin-universal`
+# `@rustup/nng-darwin-universal`
 
-This is the **universal-apple-darwin** binary for `napi-nng`
+This is the **universal-apple-darwin** binary for `@rustup/nng`

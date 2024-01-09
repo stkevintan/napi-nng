@@ -1,3 +1,3 @@
-# `napi-nng-darwin-x64`
+# `@rustup/nng-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `napi-nng`
+This is the **x86_64-apple-darwin** binary for `@rustup/nng`

@@ -45,16 +45,6 @@ jobs:
             build: |
               yarn build --target aarch64-apple-darwin
               strip -x *.node
-          # - host: ubuntu-latest
-          #   target: aarch64-unknown-linux-gnu
-          #   docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-aarch64
-          #   build: |-
-          #     set -e &&
-          #     yarn build --target aarch64-unknown-linux-gnu &&
-          #     aarch64-unknown-linux-gnu-strip *.node
-          # - host: windows-latest
-          #   target: aarch64-pc-windows-msvc
-          #   build: yarn build --target aarch64-pc-windows-msvc
     name: stable - ${{ matrix.settings.target }} - node@18
     runs-on: ${{ matrix.settings.host }}
     steps:
@@ -182,8 +172,6 @@ jobs:
       - name: List packages
         run: ls -R .
         shell: bash
-      # - name: Test bindings
-      #   run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim yarn test
   universal-macOS:
     name: Build universal macOS binary
     needs:

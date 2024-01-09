@@ -1,5 +1,5 @@
 {
-  "name": "napi-nng-win32-x64-msvc",
+  "name": "@rustup/nng-win32-x64-msvc",
   "version": "0.1.0",
   "os": [
     "win32"
@@ -11,9 +11,25 @@
   "files": [
     "nng.win32-x64-msvc.node"
   ],
+  "keywords": [
+    "nanomsg",
+    "nng",
+    "nanømsg",
+    "binding",
+    "napi"
+  ],
+  "author": {
+    "name": "stkevintan"
+  },
   "license": "MIT",
   "engines": {
     "node": ">= 10"
   },
-  "repository": "https://github.com/stkevintan/napi-nng.git"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/stkevintan/napi-nng.git",
+  "bugs": {
+    "url": "https://github.com/stkevintan/napi-nng/issues"
+  }
 }

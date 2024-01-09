@@ -1,3 +1,3 @@
-# `napi-nng-darwin-arm64`
+# `@rustup/nng-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `napi-nng`
+This is the **aarch64-apple-darwin** binary for `@rustup/nng`
