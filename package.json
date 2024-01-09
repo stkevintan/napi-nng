@@ -1,0 +1,39 @@
+{
+  "name": "napi-nng",
+  "keywords": ["nanomsg", "nng", "nanømsg", "binding", "napi"],
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "nng",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "universal-apple-darwin"
+      ]
+    },
+    "npmClient": "npm"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.17.0",
+    "@types/node": "^20.10.7",
+    "vite": "^5.0.0",
+    "vitest": "~0.34.6"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "version": "napi version",
+    "universal": "napi universal",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
+}
